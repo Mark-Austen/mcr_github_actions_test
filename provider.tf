@@ -1,4 +1,9 @@
 terraform {
+  backend "s3" {
+    bucket = "mp1mabucket"
+    key    = "path/to/my/key"
+    region = "ap-southeast-2"
+  }
   required_providers {
     megaport = {
       source  = "megaport/megaport"
